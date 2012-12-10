@@ -145,8 +145,6 @@ void moveBall()
     //Lose a life if bottom edge hit
     if (yb>=70)
     {
-      u8g.setColorIndex(0);
-      u8g.drawBox(xPaddle,63,11,1);
       xPaddle = 54;
       yb=60; 
       released = false;

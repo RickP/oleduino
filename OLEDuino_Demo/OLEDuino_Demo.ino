@@ -41,7 +41,6 @@ const uint8_t title_1[] U8G_PROGMEM = {
 
 int leftButton = 9;
 int rightButton = 8;
-int backButton = 10;
 int enterButton = 7;
 
 const byte width = 128;   //Width of screen
@@ -91,8 +90,6 @@ void setup()
   digitalWrite(leftButton, HIGH);
   pinMode(rightButton, INPUT);
   digitalWrite(rightButton, HIGH);
-  pinMode(backButton, INPUT);
-  digitalWrite(backButton, HIGH);
   pinMode(enterButton, INPUT);
   digitalWrite(enterButton, HIGH);
   
@@ -348,14 +345,6 @@ boolean titleScreen() {
     return true;
   }
   oldpad3 = pad3;
-  
-  pad2 = !digitalRead(backButton);
-  if(pad2 == 1 && oldpad2==0) {
-    gamemode = false;
-    lastKeypress = millis();
-    return false;
-  }
-  oldpad2 = pad2;
   
   return false;
 }

@@ -7859,26 +7859,6 @@ JST PH 2-pin thru-home side entry</description>
 <pad name="6" x="8.75" y="0" drill="1" diameter="2.1844"/>
 <text x="7.87" y="-5.81" size="1.27" layer="25" rot="R180">&gt;NAME</text>
 </package>
-<package name="1X01">
-<description>&lt;b&gt;PIN HEADER&lt;/b&gt;</description>
-<wire x1="-0.635" y1="1.27" x2="0.635" y2="1.27" width="0.1524" layer="21"/>
-<wire x1="0.635" y1="1.27" x2="1.27" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="1.27" y1="0.635" x2="1.27" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="1.27" y1="-0.635" x2="0.635" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="-1.27" y1="0.635" x2="-1.27" y2="-0.635" width="0.1524" layer="21"/>
-<wire x1="-0.635" y1="1.27" x2="-1.27" y2="0.635" width="0.1524" layer="21"/>
-<wire x1="-1.27" y1="-0.635" x2="-0.635" y2="-1.27" width="0.1524" layer="21"/>
-<wire x1="0.635" y1="-1.27" x2="-0.635" y2="-1.27" width="0.1524" layer="21"/>
-<pad name="1" x="0" y="0" drill="1.016" diameter="1.9304" shape="octagon"/>
-<text x="-1.3462" y="1.8288" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-1.27" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
-<rectangle x1="-0.254" y1="-0.254" x2="0.254" y2="0.254" layer="51"/>
-</package>
-<package name="1X01-CLEANBIG">
-<pad name="1" x="0" y="0" drill="1.016" diameter="1.778"/>
-<text x="-1.3462" y="1.8288" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-1.27" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
-</package>
 </packages>
 <symbols>
 <symbol name="CAPOSC">
@@ -7934,15 +7914,6 @@ JST PH 2-pin thru-home side entry</description>
 <pin name="4" x="-2.54" y="0" visible="pad" length="short" direction="pas" function="dot"/>
 <pin name="5" x="-2.54" y="-2.54" visible="pad" length="short" direction="pas" function="dot"/>
 <pin name="6" x="-2.54" y="-5.08" visible="pad" length="short" direction="pas" function="dot"/>
-</symbol>
-<symbol name="PINHD1">
-<wire x1="-6.35" y1="-2.54" x2="1.27" y2="-2.54" width="0.4064" layer="94"/>
-<wire x1="1.27" y1="-2.54" x2="1.27" y2="2.54" width="0.4064" layer="94"/>
-<wire x1="1.27" y1="2.54" x2="-6.35" y2="2.54" width="0.4064" layer="94"/>
-<wire x1="-6.35" y1="2.54" x2="-6.35" y2="-2.54" width="0.4064" layer="94"/>
-<text x="-6.35" y="3.175" size="1.778" layer="95">&gt;NAME</text>
-<text x="-6.35" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="1" x="-2.54" y="0" visible="pad" length="short" direction="pas" function="dot"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -8122,32 +8093,6 @@ JST PH 2-pin thru-home side entry</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="PINHD-1X1" prefix="JP" uservalue="yes">
-<description>&lt;b&gt;Pin header 1x1 for 0.1" spacing&lt;/b&gt;
-&lt;p&gt;
-With round pins</description>
-<gates>
-<gate name="G$1" symbol="PINHD1" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="1X01">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="CB" package="1X01-CLEANBIG">
-<connects>
-<connect gate="G$1" pin="1" pad="1"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 </devicesets>
 </library>
 </libraries>
@@ -8165,9 +8110,8 @@ With round pins</description>
 <part name="JP3" library="pinhead" deviceset="PINHD-1X2" device="" value="Battery"/>
 <part name="S1" library="switch-omron" deviceset="10-XX" device=""/>
 <part name="S2" library="switch-omron" deviceset="10-XX" device=""/>
-<part name="S3" library="switch-omron" deviceset="10-XX" device=""/>
 <part name="R2" library="rcl" deviceset="R-EU_" device="0204/7" value="100"/>
-<part name="S4" library="switch-omron" deviceset="10-XX" device="">
+<part name="S3" library="switch-omron" deviceset="10-XX" device="">
 <attribute name="MF" value=""/>
 <attribute name="MPN" value="B3F-1000"/>
 <attribute name="OC_FARNELL" value="176432"/>
@@ -8180,7 +8124,6 @@ With round pins</description>
 <part name="CN1" library="adafruit" deviceset="JST_2PIN" device="-THM-RA" value="Charger"/>
 <part name="JP5" library="pinhead" deviceset="PINHD-1X2" device="" value="Power"/>
 <part name="JP4" library="adafruit" deviceset="PINHD-1X6" device="CLEAN" value="Ananlog IO"/>
-<part name="JP6" library="adafruit" deviceset="PINHD-1X1" device="CB" value="PWM"/>
 </parts>
 <sheets>
 <sheet>
@@ -8192,9 +8135,8 @@ With round pins</description>
 <instance part="JP3" gate="G$1" x="20.32" y="40.64"/>
 <instance part="S1" gate="1" x="38.1" y="22.86"/>
 <instance part="S2" gate="1" x="20.32" y="22.86"/>
-<instance part="S3" gate="1" x="10.16" y="5.08"/>
 <instance part="R2" gate="G$1" x="22.86" y="33.02" rot="R180"/>
-<instance part="S4" gate="1" x="30.48" y="5.08"/>
+<instance part="S3" gate="1" x="30.48" y="5.08"/>
 <instance part="C1" gate="G$1" x="43.18" y="78.74"/>
 <instance part="JP2" gate="A" x="129.54" y="50.8"/>
 <instance part="R1" gate="G$1" x="30.48" y="78.74" rot="R180"/>
@@ -8202,7 +8144,6 @@ With round pins</description>
 <instance part="CN1" gate="G$1" x="5.08" y="25.4"/>
 <instance part="JP5" gate="G$1" x="-7.62" y="40.64"/>
 <instance part="JP4" gate="A" x="114.3" y="66.04"/>
-<instance part="JP6" gate="G$1" x="132.08" y="25.4"/>
 </instances>
 <busses>
 </busses>
@@ -8249,16 +8190,6 @@ With round pins</description>
 <wire x1="66.04" y1="33.02" x2="91.44" y2="33.02" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$9" class="0">
-<segment>
-<pinref part="S3" gate="1" pin="P1"/>
-<wire x1="12.7" y1="0" x2="17.78" y2="0" width="0.1524" layer="91"/>
-<wire x1="17.78" y1="0" x2="17.78" y2="12.7" width="0.1524" layer="91"/>
-<wire x1="17.78" y1="12.7" x2="91.44" y2="12.7" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="G$1" pin="PB2(SS/OC1B)"/>
-<wire x1="91.44" y1="12.7" x2="91.44" y2="22.86" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$4" class="0">
 <segment>
 <pinref part="IC1" gate="G$1" pin="PC6(/RESET)"/>
@@ -8283,11 +8214,7 @@ With round pins</description>
 </net>
 <net name="N$13" class="0">
 <segment>
-<pinref part="S3" gate="1" pin="S"/>
-<wire x1="10.16" y1="10.16" x2="10.16" y2="33.02" width="0.1524" layer="91"/>
 <pinref part="R2" gate="G$1" pin="2"/>
-<wire x1="10.16" y1="33.02" x2="17.78" y2="33.02" width="0.1524" layer="91"/>
-<junction x="17.78" y="33.02"/>
 <wire x1="17.78" y1="33.02" x2="17.78" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="17.78" y1="30.48" x2="20.32" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="S1" gate="1" pin="S"/>
@@ -8296,7 +8223,7 @@ With round pins</description>
 <wire x1="38.1" y1="30.48" x2="38.1" y2="27.94" width="0.1524" layer="91"/>
 <pinref part="S2" gate="1" pin="S"/>
 <wire x1="20.32" y1="30.48" x2="20.32" y2="27.94" width="0.1524" layer="91"/>
-<pinref part="S4" gate="1" pin="S"/>
+<pinref part="S3" gate="1" pin="S"/>
 <wire x1="30.48" y1="10.16" x2="30.48" y2="30.48" width="0.1524" layer="91"/>
 <junction x="20.32" y="30.48"/>
 <junction x="30.48" y="30.48"/>
@@ -8305,7 +8232,7 @@ With round pins</description>
 <net name="N$17" class="0">
 <segment>
 <wire x1="93.98" y1="27.94" x2="93.98" y2="0" width="0.1524" layer="91"/>
-<pinref part="S4" gate="1" pin="P1"/>
+<pinref part="S3" gate="1" pin="P1"/>
 <wire x1="93.98" y1="0" x2="33.02" y2="0" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="PB0(ICP)"/>
 <wire x1="93.98" y1="27.94" x2="91.44" y2="27.94" width="0.1524" layer="91"/>
@@ -8432,15 +8359,6 @@ With round pins</description>
 <pinref part="IC1" gate="G$1" pin="PC1(ADC1)"/>
 <wire x1="91.44" y1="71.12" x2="111.76" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="JP4" gate="A" pin="2"/>
-</segment>
-</net>
-<net name="N$23" class="0">
-<segment>
-<pinref part="IC1" gate="G$1" pin="PB3(MOSI/OC2)"/>
-<wire x1="91.44" y1="20.32" x2="124.46" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="124.46" y1="20.32" x2="124.46" y2="25.4" width="0.1524" layer="91"/>
-<pinref part="JP6" gate="G$1" pin="1"/>
-<wire x1="124.46" y1="25.4" x2="129.54" y2="25.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$24" class="0">

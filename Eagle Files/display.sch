@@ -8109,9 +8109,9 @@ JST PH 2-pin thru-home side entry</description>
 <part name="JP1" library="pinhead" deviceset="PINHD-1X6" device="/90" value="Programming port"/>
 <part name="JP3" library="pinhead" deviceset="PINHD-1X2" device="" value="Battery"/>
 <part name="S1" library="switch-omron" deviceset="10-XX" device=""/>
-<part name="S2" library="switch-omron" deviceset="10-XX" device=""/>
+<part name="S3" library="switch-omron" deviceset="10-XX" device=""/>
 <part name="R2" library="rcl" deviceset="R-EU_" device="0204/7" value="100"/>
-<part name="S3" library="switch-omron" deviceset="10-XX" device="">
+<part name="S2" library="switch-omron" deviceset="10-XX" device="">
 <attribute name="MF" value=""/>
 <attribute name="MPN" value="B3F-1000"/>
 <attribute name="OC_FARNELL" value="176432"/>
@@ -8133,10 +8133,10 @@ JST PH 2-pin thru-home side entry</description>
 <instance part="IC1" gate="G$1" x="66.04" y="45.72"/>
 <instance part="JP1" gate="A" x="22.86" y="66.04"/>
 <instance part="JP3" gate="G$1" x="20.32" y="40.64"/>
-<instance part="S1" gate="1" x="38.1" y="22.86"/>
-<instance part="S2" gate="1" x="20.32" y="22.86"/>
+<instance part="S1" gate="1" x="38.1" y="17.78"/>
+<instance part="S3" gate="1" x="20.32" y="15.24"/>
 <instance part="R2" gate="G$1" x="22.86" y="33.02" rot="R180"/>
-<instance part="S3" gate="1" x="30.48" y="5.08"/>
+<instance part="S2" gate="1" x="30.48" y="2.54"/>
 <instance part="C1" gate="G$1" x="43.18" y="78.74"/>
 <instance part="JP2" gate="A" x="129.54" y="50.8"/>
 <instance part="R1" gate="G$1" x="30.48" y="78.74" rot="R180"/>
@@ -8172,7 +8172,7 @@ JST PH 2-pin thru-home side entry</description>
 <net name="N$10" class="0">
 <segment>
 <pinref part="S1" gate="1" pin="P1"/>
-<wire x1="40.64" y1="17.78" x2="68.58" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="12.7" x2="68.58" y2="17.78" width="0.1524" layer="91"/>
 <wire x1="68.58" y1="17.78" x2="68.58" y2="10.16" width="0.1524" layer="91"/>
 <wire x1="68.58" y1="10.16" x2="96.52" y2="10.16" width="0.1524" layer="91"/>
 <wire x1="96.52" y1="10.16" x2="96.52" y2="25.4" width="0.1524" layer="91"/>
@@ -8182,10 +8182,9 @@ JST PH 2-pin thru-home side entry</description>
 </net>
 <net name="N$11" class="0">
 <segment>
-<pinref part="S2" gate="1" pin="P1"/>
-<wire x1="22.86" y1="17.78" x2="25.4" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="25.4" y1="15.24" x2="66.04" y2="15.24" width="0.1524" layer="91"/>
-<wire x1="66.04" y1="15.24" x2="66.04" y2="33.02" width="0.1524" layer="91"/>
+<pinref part="S3" gate="1" pin="P1"/>
+<wire x1="22.86" y1="10.16" x2="66.04" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="10.16" x2="66.04" y2="33.02" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="PD7(AIN1)"/>
 <wire x1="66.04" y1="33.02" x2="91.44" y2="33.02" width="0.1524" layer="91"/>
 </segment>
@@ -8220,20 +8219,20 @@ JST PH 2-pin thru-home side entry</description>
 <pinref part="S1" gate="1" pin="S"/>
 <wire x1="20.32" y1="30.48" x2="30.48" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="30.48" y1="30.48" x2="38.1" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="38.1" y1="30.48" x2="38.1" y2="27.94" width="0.1524" layer="91"/>
-<pinref part="S2" gate="1" pin="S"/>
-<wire x1="20.32" y1="30.48" x2="20.32" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="30.48" x2="38.1" y2="22.86" width="0.1524" layer="91"/>
 <pinref part="S3" gate="1" pin="S"/>
-<wire x1="30.48" y1="10.16" x2="30.48" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="30.48" x2="20.32" y2="20.32" width="0.1524" layer="91"/>
+<pinref part="S2" gate="1" pin="S"/>
+<wire x1="30.48" y1="7.62" x2="30.48" y2="30.48" width="0.1524" layer="91"/>
 <junction x="20.32" y="30.48"/>
 <junction x="30.48" y="30.48"/>
 </segment>
 </net>
 <net name="N$17" class="0">
 <segment>
-<wire x1="93.98" y1="27.94" x2="93.98" y2="0" width="0.1524" layer="91"/>
-<pinref part="S3" gate="1" pin="P1"/>
-<wire x1="93.98" y1="0" x2="33.02" y2="0" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="27.94" x2="93.98" y2="-2.54" width="0.1524" layer="91"/>
+<pinref part="S2" gate="1" pin="P1"/>
+<wire x1="93.98" y1="-2.54" x2="33.02" y2="-2.54" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="PB0(ICP)"/>
 <wire x1="93.98" y1="27.94" x2="91.44" y2="27.94" width="0.1524" layer="91"/>
 </segment>

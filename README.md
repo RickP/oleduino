@@ -10,5 +10,5 @@ All the anaolog ports and one pwm port are available for your addons (e.g. addin
 * A source for the OLED: Search eBay for "128X64 OLED module" and pick the cheapest one with the 7 pin header on top
 * A source for a battery: Any small 3.7V lithium polymer battery will do (like the ones for small RC helicopters)
 * A source for the charger: http://www.ebay.com/itm/260581913847
-* 
+
 ![OLEDuino](raw.github.com/RickP/oleduino/master/Assembled_Device.jpg)

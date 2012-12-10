@@ -39,11 +39,10 @@ const uint8_t title_1[] U8G_PROGMEM = {
 0x00,0x07,0xFF,0xBE,0x0F,0xFE,0xFF,0xFF,0x1E,0xFF,0x3F,0xE0,0xFF,0xE0,0x00,
 };
 
-
 int leftButton = 9;
-int rightButton = 10;
-int backButton = 11;
-int enterButton = 12;
+int rightButton = 8;
+int backButton = 10;
+int enterButton = 7;
 
 const byte width = 128;   //Width of screen
 const byte height = 64;   //Hight of screen
@@ -66,7 +65,7 @@ boolean start=false;      //If in menu or in game
 boolean gamemode=false;      //If in menu or in game
 boolean initialDraw=false;//If the inital draw has happened
 char initials[3];         //Initials used in high score
-int divisor = 3;
+int divisor = 2;
 int moveStep = 0;
 int stringPos = 0;
 

@@ -1,8 +1,9 @@
  /*
  OLEDuino Demo
  Copyright (C) 2012 Rick Pannen
- All rights reserved.
- 
+
+ The Breakout game is ported from Sebastian Goscik's version for hackvision
+
  This library is free software; you can redistribute it and/or
  modify it under the terms of the GNU Lesser General Public
  License as published by the Free Software Foundation; either

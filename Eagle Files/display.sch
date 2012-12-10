@@ -8123,7 +8123,7 @@ JST PH 2-pin thru-home side entry</description>
 <part name="U$1" library="adafruit" deviceset="CERMOSCILL" device="-THM" value="8Mhz"/>
 <part name="CN1" library="adafruit" deviceset="JST_2PIN" device="-THM-RA" value="Charger"/>
 <part name="JP5" library="pinhead" deviceset="PINHD-1X2" device="" value="Power"/>
-<part name="JP4" library="adafruit" deviceset="PINHD-1X6" device="CLEAN" value="Ananlog IO"/>
+<part name="JP4" library="adafruit" deviceset="PINHD-1X6" device="CLEAN" value="Analog IO"/>
 </parts>
 <sheets>
 <sheet>

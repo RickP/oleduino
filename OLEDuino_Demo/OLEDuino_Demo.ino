@@ -66,7 +66,7 @@ boolean start=false;      //If in menu or in game
 boolean gamemode=false;      //If in menu or in game
 boolean initialDraw=false;//If the inital draw has happened
 char initials[3];         //Initials used in high score
-int divisor = 1;
+int divisor = 3;
 int moveStep = 0;
 int stringPos = 0;
 
@@ -175,9 +175,9 @@ void moveBall()
       dx=-dx;
     }
     //Bounce off paddle
-    if (xb+1>=xPaddle && xb<=xPaddle+20 && yb+2>=63 && yb<=63){
+    if (xb+1>=xPaddle && xb<=xPaddle+20 && yb+2==63){
       dy=-dy;
-      dx=((xb-(xPaddle+10))/3); //Applies spin on the ball
+      dx=((xb-(xPaddle+10))/2); //Applies spin on the ball
     }
 
     //Bounce off Bricks
@@ -299,7 +299,6 @@ void newLevel(){
   xPaddle = 50;
   yb=60;
   brickCount=0;
-  lives = 3;
   released=false;
   
   //resets their values
@@ -340,15 +339,14 @@ boolean titleScreen() {
     u8g.drawStr(57, 45, F("Move paddle"));
   }
   
-  
   u8g.setFont(u8g_font_6x12);
   u8g.drawStr(10, 60, F("Right button: Start"));
-
 
   pad3 = !digitalRead(enterButton);
   if(pad3 == 1 && oldpad3==0) {
     newLevel();
     score = 0;
+    lives = 3;
     lastKeypress = millis();
     return true;
   }
